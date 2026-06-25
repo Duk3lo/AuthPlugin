@@ -1,0 +1,6 @@
+name: AuthPlugin
+version: '${version}'
+
+main: org.astral.authPlugin.AuthPlugin
+api-version: '26.2'
+load: POSTWORLD
