@@ -10,5 +10,7 @@ public final class RegisterEvents {
         PluginManager manager = plugin.getServer().getPluginManager();
 
         manager.registerEvents(new PlayerVisibilityListener(), plugin);
+        manager.registerEvents(new DamageProtectionListener(), plugin);
+        manager.registerEvents(new HungerProtectionListener(), plugin);
     }
 }
