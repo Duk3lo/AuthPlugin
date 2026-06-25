@@ -27,7 +27,7 @@ public final class PlayerVisibilityListener implements Listener {
 
             for (Player other : player.getServer().getOnlinePlayers()) {
 
-                if (other.equals(player)) {
+                if (player.equals(other)) {
                     continue;
                 }
 

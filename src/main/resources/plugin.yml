@@ -1,6 +1,21 @@
 name: AuthPlugin
-version: '${version}'
+version: '1.0.0'
 
 main: org.astral.authPlugin.AuthPlugin
-api-version: '26.2'
+
+api-version: '1.21'
+
+folia-supported: true
+
 load: POSTWORLD
+
+commands:
+  auth:
+    description: AuthPlugin command
+    usage: /auth reload
+    permission: auth.admin
+
+permissions:
+  auth.admin:
+    description: Allows reloading AuthPlugin
+    default: op
