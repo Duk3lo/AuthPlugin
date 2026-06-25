@@ -13,6 +13,7 @@ public final class PlayerVisibilityListener implements Listener {
 
     @EventHandler
     public void onJoin(@NonNull PlayerJoinEvent event) {
+
         Player player = event.getPlayer();
 
         player.getScheduler().run(plugin, _ -> {
@@ -21,15 +22,11 @@ public final class PlayerVisibilityListener implements Listener {
                 player.setCollidable(false);
             }
 
-            if (!plugin.getConfigManager().isHidePlayers()) {
-                return;
-            }
+            if (!plugin.getConfigManager().isHidePlayers()) return;
 
             for (Player other : player.getServer().getOnlinePlayers()) {
 
-                if (player.equals(other)) {
-                    continue;
-                }
+                if (other.equals(player)) continue;
 
                 player.hidePlayer(plugin, other);
                 other.hidePlayer(plugin, player);

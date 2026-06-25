@@ -1,3 +1,15 @@
 players:
   hide: true
   disable-collisions: true
+
+spawn:
+  world: world
+  x: 0.5
+  y: 80
+  z: 0.5
+  yaw: 0
+  pitch: 0
+
+limits:
+  min-y: 0
+  max-y: 200

@@ -7,10 +7,13 @@ import org.jspecify.annotations.NonNull;
 public final class RegisterEvents {
 
     public static void registerAll(@NonNull AuthPlugin plugin) {
+
         PluginManager manager = plugin.getServer().getPluginManager();
 
         manager.registerEvents(new PlayerVisibilityListener(), plugin);
         manager.registerEvents(new DamageProtectionListener(), plugin);
         manager.registerEvents(new HungerProtectionListener(), plugin);
+        manager.registerEvents(new BlockProtectionListener(), plugin);
+        manager.registerEvents(new WorldLimitListener(), plugin);
     }
 }

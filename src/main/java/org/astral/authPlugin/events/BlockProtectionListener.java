@@ -4,15 +4,15 @@ import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.jspecify.annotations.NonNull;
 
-public final class DamageProtectionListener implements Listener {
+public final class BlockProtectionListener implements Listener {
 
     @EventHandler
-    public void onDamage(@NonNull EntityDamageEvent event) {
+    public void onBreak(@NonNull BlockBreakEvent event) {
 
-        if (!(event.getEntity() instanceof Player player)) return;
+        Player player = event.getPlayer();
 
         if (player.getGameMode() == GameMode.CREATIVE) return;
 
