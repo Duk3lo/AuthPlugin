@@ -48,6 +48,6 @@ public final class WorldLimitListener implements Listener {
                 cfg.getSpawnPitch()
         );
 
-        player.teleport(spawn);
+        player.teleportAsync(spawn);
     }
 }
